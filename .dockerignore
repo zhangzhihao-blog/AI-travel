@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.git
+.gitignore
+README.md
+.env.local
+.env.production
+*.md
+.gitlab-ci.yml
+Dockerfile
+.github

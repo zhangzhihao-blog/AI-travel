@@ -1,0 +1,90 @@
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.site-layout-content {
+  background: #fff;
+  padding: 24px;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .site-layout-content {
+    padding: 12px;
+  }
+}
+
+/* 全局样式调整，使地图成为焦点 */
+#map-container {
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+/* 地图卡片body铺满 */
+.ant-card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px !important;
+}
+
+/* 抽屉样式优化 */
+.ant-drawer-body {
+  padding: 12px;
+}
+
+/* 确保布局能够铺满整个屏幕 */
+.layout {
+  min-height: 100vh;
+}
+
+/* 确保html和body元素铺满整个屏幕 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
