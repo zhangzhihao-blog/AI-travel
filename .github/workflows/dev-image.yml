@@ -3,7 +3,7 @@ name: Build and Push Development Image
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-push:
@@ -19,7 +19,7 @@ jobs:
     - name: Login to Aliyun Container Registry
       uses: docker/login-action@v2
       with:
-        registry: crpi-q3dccq3gfqxo7waz.cn-hangzhou.personal.cr.aliyuncs.com
+        registry: crpi-987f0j2pj3z3rqrh.cn-shanghai.personal.cr.aliyuncs.com
         username: ${{ secrets.ALIYUN_USERNAME }}
         password: ${{ secrets.ALIYUN_PASSWORD }}
 
@@ -28,6 +28,6 @@ jobs:
       with:
         context: .
         push: true
-        tags: crpi-q3dccq3gfqxo7waz.cn-hangzhou.personal.cr.aliyuncs.com/${{ secrets.ALIYUN_NAMESPACE }}/ai-traveller-dev:latest
+        tags: crpi-987f0j2pj3z3rqrh.cn-shanghai.personal.cr.aliyuncs.com/${{ secrets.ALIYUN_NAMESPACE }}/ai-traveller-dev:latest
         cache-from: type=gha
         cache-to: type=gha,mode=max
